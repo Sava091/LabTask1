@@ -3,14 +3,16 @@ package com.epam.training.labTask1.services;
 import com.epam.training.labTask1.domain.Salad;
 import com.epam.training.labTask1.domain.Vegitable;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
+import java.util.List;
 
 public class SaladService {
     public double calCalories(Salad salad) {
         Vegitable[] vegitables = salad.getVegitables();
         int calories = 0;
-        for (int i = 0; i < vegitables.length - 1; i++) {
+        for (int i = 0; i < vegitables.length; i++) {
             calories += vegitables[i].calCalories();
         }
         return calories;
@@ -25,13 +27,14 @@ public class SaladService {
         });
     }
 
-    public void findCalories(Salad salad, double minCalories, double maxCalories) {
+    public List<Vegitable> findCalories(Salad salad, double minCalories, double maxCalories) {
         Vegitable[] vegitables = salad.getVegitables();
+        List<Vegitable> resVegitebles = new ArrayList<>();
         for (int i = 0; i < vegitables.length; i++){
             if (minCalories < vegitables[i].calCalories() && maxCalories > vegitables[i].calCalories()) {
-                System.out.println(vegitables[i].calCalories());
+                resVegitebles.add(vegitables[i]);
             }
-//            System.out.println(vegitables[i].calCalories());
         }
+        return resVegitebles;
     }
 }

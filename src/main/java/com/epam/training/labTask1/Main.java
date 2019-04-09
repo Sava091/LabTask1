@@ -3,6 +3,7 @@ package com.epam.training.labTask1;
 import  com.epam.training.labTask1.domain.*;
 import  com.epam.training.labTask1.services.SaladService;
 
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
@@ -27,6 +28,7 @@ public class Main {
         int minCalories = scanner.nextInt();
         int maxCalories = scanner.nextInt();
 
-        saladService.findCalories(salad, minCalories, maxCalories);
+        List<Vegitable> vegitables = saladService.findCalories(salad, minCalories, maxCalories);
+        System.out.println(vegitables);
     }
 }
