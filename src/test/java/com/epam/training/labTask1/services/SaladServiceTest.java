@@ -30,6 +30,8 @@ public class SaladServiceTest {
     @Test
     public void calCaloriesSuccess() {
         double calories = saladService.calCalories(salad);
+
+
         assertEquals(100 * 6 / 100 + 300 * 1 / 100 + 200 * 2 / 100, calories, 0);
     }
 
