@@ -8,14 +8,11 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Onion onion = new Onion(300,1,3,2,4);
-        Tomato tomato = new Tomato(400,2,3,5,6);
-        Cucumber cucumber = new Cucumber(200,14,7,5,4);
 
         Vegitable[] Vegitables = new Vegitable[3];
-        Vegitables[0] = onion;
-        Vegitables[1] = tomato;
-        Vegitables[2] = cucumber;
+        Vegitables[0] = new Onion(300,1,3,2,4);
+        Vegitables[1] = new Tomato(400,2,3,5,6);
+        Vegitables[2] = new Cucumber(200,14,7,5,4);
 
         Salad salad = new Salad(Vegitables);
         SaladService saladService = new SaladService();
