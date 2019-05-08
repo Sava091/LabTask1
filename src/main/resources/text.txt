@@ -9,7 +9,7 @@
 
 2.2.3 Methods (Operators and Operations)
 Methods in Ada are subprograms (procedures/functions) and include both operators and operations.
-Operators include the symbols:   =, /=, <, >, <=, >=, &, +, -, /, *.   Other operators are the reserved words, and, or, xor, not, abs, rem, mod.  
+Operators include the symbols:   =, /=, <, >, <=, >=, &, +, -, /, *.   Other operators are the reserved sentence, and, or, xor, not, abs, rem, mod.
  One issue that annoys newcomers to Ada is the strictness of the visibility rules associated with operators.
  We will discuss the visibility rules and techniques for using them sensibly in Section 2.4 and elsewhere in this book.
  For detailed operator rules,  see ALRM 4.5. All other methods are called operations.  One operation, assignment uses the compound symbol:   := . 

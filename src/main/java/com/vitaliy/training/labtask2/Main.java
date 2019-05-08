@@ -3,19 +3,17 @@ package com.vitaliy.training.labtask2;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        Words words = new Words();
+        Text sentence = new Text();
+        TextService textService = new TextService();
         try {
-            List<String> strings = Files.readAllLines(Paths.get("src/main/resources/text.txt"));
-            for (String string : strings) {
-                words.parseString(string);
-            }
+            String text = new String(Files.readAllBytes(Paths.get("src/main/resources/text.txt")));
+            textService.parseString(sentence.getWordSet(), text);
         } catch (IOException e) {
             e.printStackTrace();
         }
-        words.printWords();
+        System.out.println(textService.formatWords(sentence.getWordSet()));
     }
 }
